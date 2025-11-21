@@ -9,8 +9,5 @@
 
 ---
 
-## 🎥 Demo
-*🚧 Coming soon! Recording a showcase video.*  
-*← **Сними 2-минутное видео, где показываешь работу ассистента!** *
 
 ## 🏗️ System Architecture
