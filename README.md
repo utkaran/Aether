@@ -1,29 +1,16 @@
 # Aether
 
-> An open-source, modular voice assistant framework. Not just a program — it's the core of your digital ecosystem.
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Issues](https://img.shields.io/github/issues/utkaran/Aether.svg)](https://github.com/utkaran/Aether/issues)
 
-**🚀 Current Features**
-- Voice interface with wake word detection
-- Modular architecture with independent "neurons"
-- System control (shutdown, media, etc.)
-- Telegram integration
-- Weather, reminders, calendar
-- And much more...
+> **An open-source framework for building ambient intelligence.**  
+> Privacy-first, modular, and hackable. Born in a "garage" with pure enthusiasm.
 
-**🛠️ Tech Stack**
-- Python + custom ML models
-- Modular plugin architecture
-- Tkinter GUI
-- Vosk/Whisper for speech recognition
+---
 
-**🎯 Project Status**
-Active development! This is a passion project, not a commercial product.
+## 🎥 Demo
+*🚧 Coming soon! Recording a showcase video.*  
+*← **Сними 2-минутное видео, где показываешь работу ассистента!** *
 
-**🤝 Contributing**
-I'm open to collaborations! Feel free to:
-- Open issues for bugs or feature requests
-- Submit pull requests
-- Fork and experiment
-
-**📜 License**
-MIT License - feel free to use this code for your own projects!
+## 🏗️ System Architecture
