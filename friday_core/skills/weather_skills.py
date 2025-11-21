@@ -6,7 +6,7 @@ from friday_core.config.config import config
 
 class WeatherSkills:
     def __init__(self):
-        self.api_key = config.get('api_keys.openweathermap', 'd6949ae5f1fc1c5209f7d26b2044e215')
+        self.api_key = config.get('api_keys.openweathermap', 'Your API')
         self.base_url = "http://api.openweathermap.org/data/2.5/weather"
         self.default_city = config.get('location.default_city', 'Рязань')
         self.cache = {}
