@@ -1,0 +1,43 @@
+{
+    "assistant": {
+        "name": "Пятница",
+        "language": "ru-RU",
+        "wake_words": [
+            "пятница",
+            "пят"
+        ],
+        "response_delay": 0.5
+    },
+    "voice": {
+        "rate": 150,
+        "volume": 1.0,
+        "voice_id": null,
+        "edge_voice": "ru-RU-SvetlanaNeural",
+        "tts_provider": "edge"
+    },
+    "api_keys": {
+        "openweathermap": "d6949ae5f1fc1c5209f7d26b2044e215",
+        "yandex_speech": ""
+    },
+    "location": {
+        "default_city": "Рязань",
+        "timezone": "Europe/Moscow"
+    },
+    "sounds": {
+        "enabled": true,
+        "volume": 0.5
+    },
+    "media": {
+        "default_music_service": "youtube",
+        "browser": "default"
+    },
+    "system": {
+        "shutdown_timeout": 15,
+        "auto_update": false
+    },
+    "telegram": {
+        "bot_token": "7267509799:AAGPnUMg5G47eNRCaipVyTbhleyxh6LRDno",
+        "chat_id": "",
+        "enabled": false
+    }
+}
