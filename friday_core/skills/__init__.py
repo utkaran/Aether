@@ -1,3 +1,5 @@
+# friday_core/skills/__init__.py
+
 from friday_core.skills.basic_skills import BasicSkills
 from friday_core.skills.audio_skills import AudioSkills
 from friday_core.skills.automation_skills import automation_skills

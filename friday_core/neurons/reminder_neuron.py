@@ -1,4 +1,4 @@
-# reminder_neuron.py
+# friday_core/neurons/reminder_neuron.py
 
 from friday_core.neurons.base_neuron import BaseNeuron
 

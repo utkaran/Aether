@@ -1,4 +1,4 @@
-# telegram_skills.py
+# friday_core/skills/telegram_skills.py
 import requests
 import json
 import os

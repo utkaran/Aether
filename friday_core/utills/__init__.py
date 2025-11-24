@@ -1,3 +1,5 @@
+# friday_core/utills/__init__.py
+
 from friday_core.utills.recomendation_system import RecomendationSystem, recomendation_system
 from friday_core.utills.event_bus import EventBus, EventType, event_bus
 

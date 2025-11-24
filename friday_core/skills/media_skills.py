@@ -1,3 +1,5 @@
+# friDAY_CORE/friday_core/skills/media_skills.py
+
 import os
 import webbrowser
 

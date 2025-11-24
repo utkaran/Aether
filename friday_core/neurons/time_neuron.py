@@ -1,4 +1,4 @@
-# time_neuron.py
+# friday_core/neurons/time_neuron.py
 
 from friday_core.neurons.base_neuron import BaseNeuron
 

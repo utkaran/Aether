@@ -1,4 +1,4 @@
-# main.py
+# friday_core/main.py
 from friday_core.engine.voice_engine import VoiceEngine
 from friday_core.brain.command_handler import CommandHandler
 from friday_core.engine.sound_manager import sound_manager
@@ -13,6 +13,7 @@ from test_event_subscribers import test_subscribers
 from friday_core.utills.logger import perfomance_logger
 from friday_core.brain.optimized_smart_command import OptimizedSmartCommand
 from friday_core.utills.health_monitor import HealthMonitor
+from friday_core.brain.smart_command_handler_refactored import SmartCommandHandlerRefactored
 
 class Friday:
     def __init__(self):
@@ -21,7 +22,16 @@ class Friday:
 
         self.perfomance_logger = perfomance_logger
         self.command_handler = OptimizedSmartCommand()
-        self.health_monitor = HealthMonitor()
+        self.command_handler = SmartCommandHandlerRefactored(config=self.config)
+        self.command_handler.setup_skills(
+            basic_skills=self.basic_skills,
+            system_skills=self.system_skills,
+            weather_skills=self.weather_skills,
+            media_skills=self.media_skills,
+            audio_skills=self.audio_skills,
+            automation_skills=self.automation_skills,
+            reminder_skills=self.reminder_skills
+        )
 
 
         self.voice_engine._init_recognizer()
@@ -29,7 +39,6 @@ class Friday:
         self.command_handler = SmartCommandHandler()
         self.is_running = False
 
-        self.health_monitor.start_monitoring()
         print(f"Event Bus: Статистика {event_bus.get_stats()}")
         self.assistant_name = config.get('assistant.name', 'Пятница')
 

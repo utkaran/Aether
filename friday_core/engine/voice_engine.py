@@ -1,4 +1,4 @@
-# voice_engine.py
+# friday_core/engine/voice_engine.py
 
 import speech_recognition as sr
 import re

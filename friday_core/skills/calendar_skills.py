@@ -1,4 +1,4 @@
-# calendar_skills.py
+# friday_core/skills/calendar_skills.py
 import datetime
 import json
 import os

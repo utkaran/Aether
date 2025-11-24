@@ -1,4 +1,4 @@
-# будильник и напоминания
+# friday_core/skills/reminder_skills.py
 
 import threading
 import time

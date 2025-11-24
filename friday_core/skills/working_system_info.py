@@ -1,3 +1,5 @@
+# friday_core/skills/working_system_info.py
+
 import platform
 import datetime
 import os

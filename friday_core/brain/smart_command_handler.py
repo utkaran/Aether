@@ -1,4 +1,4 @@
-# smart_command_handler.py
+#/friday_core/brain/smart_command_handler.py
 
 from friday_core.brain.intent_classifier import intent_classifier
 from friday_core.brain.command_handler import CommandHandler
@@ -116,7 +116,7 @@ class SmartCommandHandler(CommandHandler):
     return handler(command)
   
   def _handle_weather_intent(self, command):
-    location = self.conservation_context.get('location', None)
+    location = self.conversation_context.get('location', None)
     command_lower = command.lower()
 
     if 'москв' in location:
@@ -331,7 +331,7 @@ class SmartCommandHandler(CommandHandler):
     response = random.choice(farewell_responses)
         
         # Сохраняем контекст для корректного выхода
-    self.conservation_context['should_exit'] = True
+    self.conversation_context['should_exit'] = True
         
     return response
   

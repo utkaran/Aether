@@ -1,3 +1,5 @@
+# friday_core/skills/email_skills.py
+
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart

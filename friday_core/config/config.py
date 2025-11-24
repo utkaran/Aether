@@ -1,7 +1,7 @@
 """
 Конфигурация голосового ассистента Пятница
 """
-# config.py
+# friday_core/config/config.py
 
 import os
 import json

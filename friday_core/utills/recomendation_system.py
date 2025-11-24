@@ -1,4 +1,4 @@
-# recomendation_system.py
+# friday_core/utills/recomendation_system.py
 
 from collections import defaultdict, Counter
 import json

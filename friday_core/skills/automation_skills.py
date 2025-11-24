@@ -1,4 +1,4 @@
-# automation_skills.py
+# friday_core/skills/automation_skills.py
 import pyautogui
 import psutil
 import os

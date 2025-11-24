@@ -1,4 +1,4 @@
-# event_bus.py
+# friday_core/utills/event_bus.py
 import json
 import time
 from typing import Dict, List, Callable, Any

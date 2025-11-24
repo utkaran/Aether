@@ -1,4 +1,4 @@
-# pygame_edge_tts.py
+# friday_core/engine/pygame_edge_tts.py
 
 import os
 import subprocess

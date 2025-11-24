@@ -2,7 +2,7 @@
 Система персонализации для Пятницы
 Запоминает предпочтения пользователя и адаптируется под него
 """
-# personalization.py
+# friday_core/config/personalization.py
 
 import json
 import os

@@ -1,4 +1,4 @@
-# базовые навыки
+# friday_core/skills/basic_skills.py
 
 import datetime
 import webbrowser

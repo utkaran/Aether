@@ -1,4 +1,4 @@
-# command_handler.py
+# /friday_core/brain/command_handler.py
 
 from friday_core.skills.basic_skills import BasicSkills
 from friday_core.skills.system_skills import SystemSkills
@@ -17,7 +17,6 @@ from phone_bridge import phone_bridge
 from friday_core.neurons.neuron_orchestrator import NeuronOrchestrator
 
 
-
 class CommandHandler:
     def __init__(self):
         self.basic_skills = BasicSkills()
@@ -34,6 +33,7 @@ class CommandHandler:
         self.phone_bridge = None
 
         self.neuron_orchestrator = NeuronOrchestrator()
+
 
     def get_media_skills(self):
         """Безопасная ленивая загрузка media_skills"""
@@ -92,22 +92,29 @@ class CommandHandler:
         if any(word in command_lower for word in['привет', "здравствуй", "добрый", "хай"]):
             return personalization.get_personalized_greeting()
         
-        elif 'нейроны' in command_lower:
-            if 'статус' in command_lower:
+        if 'нейроны' in command_lower and 'статус' in command_lower:
+            try:
                 status = self.neuron_orchestrator.get_status()
-                response = f'Статус нейронов: {status["active"]}/{status["total"]} активны'
-                for name, details in status['details'].items():
-                    status_icon = "🟢" if details['active'] else "🔴"
-                    response += f'{status_icon} {name} (ошибок: {details["errors"]})\n'
+                response = f'Статус нейронов:\n'
+                response += f'Загружено: {status["total_loaded"]}/{status["total_registered"]}\n'
+                response += f'🟢 Активных: {status["active"]}\n'
+                response += f'🔴 Неактивны: {status["inactive"]}\n'
+
+                if status['details']:
+                    response += 'Загруженные нейроны\n'
+                    for name, details in status['details'].items():
+                        status_icon = "🟢" if details['active'] else "🔴"
+                        response += f"   {status_icon} {name} (ошибок: {details['errors']})\n"
+                else:
+                    response += 'Нет загруженных нейронов\n'
+
+                response += f"\n📜 Доступные нейроны: {', '.join(status['available_neurons'])}"
                 return response
             
-            elif 'перезапусти' in command_lower:
-                return self.neuron_orchestrator.restart_all_neurons()
-            
-            elif 'список' in command_lower:
-                status = self.neuron_orchestrator.get_status()
-                neuron_list = "\n".join([f"- {name}" for name in status['details'].keys()])
-                return f'Список нейронов:\n{neuron_list}'
+            except Exception as e:
+                return f"Ошибка при получении статуса нейронов: {str(e)}"
+
+
             
         if any(word in command_lower for word in ['статус системы', 'здоровье системы', 'мониторинг']):
             status = self.get_system_status()

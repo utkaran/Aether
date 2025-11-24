@@ -1,4 +1,4 @@
-# ffplay_tts.py
+# friday_core/engine/ffplay_tts.py
 
 import os
 import subprocess

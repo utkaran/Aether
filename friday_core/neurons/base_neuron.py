@@ -1,4 +1,4 @@
-# base_neuron.py
+# friday_core/neurons/base_neuron.py
 
 from abc import ABC, abstractmethod
 from typing import Optional, Dict, Any

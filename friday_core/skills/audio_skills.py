@@ -1,4 +1,4 @@
-# Регулировка громкости
+# friday_core/skills/audio_skills.py
 
 import os
 import subprocess

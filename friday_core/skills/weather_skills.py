@@ -1,3 +1,5 @@
+# friday_core/skills/weather_skills.py
+
 import requests
 import json
 import re

@@ -1,3 +1,5 @@
+# friday_core/skills/system_skills.py
+
 import os
 import subprocess
 import platform
