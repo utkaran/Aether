@@ -133,7 +133,7 @@ class TelegramSkills:
             status += "\n\n💡 Инструкция:\n"
             status += "1. Откройте config.json\n"
             status += "2. В разделе telegram добавьте:\n"
-            status += '   "bot_token": "7267509799:AAGPnUMg5G47eNRCaipVyTbhleyxh6LRDno"\n'
+            status += '   "bot_token": "Your token"\n'
             status += "3. Перезапустите Пятницу"
         
         return status
